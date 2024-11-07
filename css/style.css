@@ -26,3 +26,25 @@ header nav {
     flex: content;
     justify-content: end;
 }
+.titulo:hover {
+    background-color: #6699FF;
+}
+.logo {
+    width: 2%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.texto_logo {
+    flex: content;
+    position: absolute;
+    margin-top: 0.5em;
+}
+
+.caja_contacto {
+    margin: 1%;
+}
