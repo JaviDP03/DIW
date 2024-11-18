@@ -78,13 +78,17 @@ body {
     z-index: -1;
 }
 
-.boton{
+.boton {
     text-decoration: none;
     color: var(--blanco);
     background-color: var(--secundario);
     padding: 1%;
     border-radius: 5%;
     font-weight: bold;
+}
+
+.boton:hover {
+    background-color: var(--primario);
 }
 
 #central {
@@ -100,11 +104,62 @@ body {
 
 #central svg {
     background-color: var(--primario);
-    padding: 5%;
+    padding: 8%;
     border-radius: 50%;
 }
 
-
 #central p {
     text-align: justify;
+}
+
+.subtitulo {
+    color: var(--secundario);
+    font-weight: 100;
+}
+
+.formulario {
+    width: 25%;
+    margin: auto;
+    background-color: var(--gris);
+    border-radius: 2%;
+    padding: 1%;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primario);
+    text-align: center;
+}
+
+.contenedor_campos {
+    display: flex;
+    justify-content: start;
+    padding: 1%;
+}
+
+.campo label {
+    font-weight: bold;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.campos_alineados {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-text {
+    width: 100%;
+    padding: 5%;
+    margin: 1%;
+    border-radius: 10%;
+    border: 1px solid var(--gris-oscuro);
+    box-sizing: border-box;
+    font-size: 1.2rem;
 }
