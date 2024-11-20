@@ -29,17 +29,18 @@ body {
     margin: 0 auto;
 }
 
+/* Menu de navegación */
 .navegacion-principal {
     display: flex;
-    flex-direction: row;
     /* Menú horizontal */
-    justify-content: space-between;
+    flex-direction: row;
     /* Espacio entre elementos */
-
+    justify-content: space-between;
 }
 
 .nav-bg {
     background-color: var(--secundario);
+    width: 100%;
 }
 
 .navegacion-principal a {
@@ -57,11 +58,10 @@ body {
 }
 
 #entrada {
-    position: relative;
+    position: relative; /* Para que el contenido no se salga */
     text-align: center;
     color: var(--blanco);
     padding: 5%;
-    overflow: hidden;
 }
 
 #entrada::before {
@@ -71,26 +71,35 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/hero.jpg');
+    background-image: url('../img/hero.jpg'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
-    filter: brightness(0.5);
-    z-index: -1;
+    filter: brightness(0.5); /* Opacidad */
+    z-index: -1; /* Detrás de todo */
 }
 
+/* Botón */
 .boton {
-    text-decoration: none;
+    display: inline-block;
+    background-color: var(--secundario); /* Color */
     color: var(--blanco);
-    background-color: var(--secundario);
-    padding: 1%;
-    border-radius: 5%;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none; /* Quitar subrayado */
     font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer; /* Cambiar cursor */
+    margin-left: 1rem;
+    border: none; /* Quitar borde */
 }
 
+/* Efecto hover */
 .boton:hover {
     background-color: var(--primario);
 }
 
+/* Sección central */
 #central {
     display: flex;
     justify-content: space-between;
@@ -102,6 +111,7 @@ body {
     padding-left: 4%;
 }
 
+/* Forma circular */
 #central svg {
     background-color: var(--primario);
     padding: 8%;
@@ -117,30 +127,43 @@ body {
     font-weight: 100;
 }
 
+/* Formulario */
 .formulario {
     width: 25%;
-    margin: auto;
+    margin: 0 auto;
     background-color: var(--gris);
     border-radius: 5px;
-    padding: 1% 4.5% 1% 1%;
+    padding: 1%;
 }
 
 .formulario fieldset {
     border: none;
 }
 
+/* Leyenda */
 .formulario legend {
     text-transform: uppercase;
     font-weight: bold;
     color: var(--primario);
     text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5%;
 }
 
+/* Mostrar los campos con espacios */
 .contenedor_campos {
     display: flex;
     justify-content: space-between;
 }
 
+/* Campo */
+.campo {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* Etiqueta del campo */
 .campo label {
     font-weight: bold;
     color: var(--blanco);
@@ -148,16 +171,74 @@ body {
     text-align: left;
 }
 
+/* Alinear los campos */
 .campos_alineados {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2%;
 }
 
+/* Input text */
 input.input-text {
     width: 100%;
-    padding: 10% 8%;
+    padding: 7%;
+    margin-top: 2%;
     border-radius: 5px;
     border: 1px solid var(--gris-oscuro);
     font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+/* Input del correo */
+input.input-textcorreo {
+    width: 100%;
+    padding: 3%;
+    margin-top: 2%;
+    border-radius: 5px;
+    border: 1px solid var(--gris-oscuro);
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+/* Textarea */
+textarea.input-text {
+    width: 100%;
+    padding: 3%;
+    padding-bottom: 20%;
+    margin-top: 2%;
+    border-radius: 5px;
+    border: 1px solid var(--gris-oscuro);
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+/* Espaciado entre campos */
+.campos_alineados .campo:first-child {
+    margin-right: 3rem;
+}
+
+/* Espaciado entre campos */
+.campos_alineados .campo:last-child {
+    margin-left: 3rem;
+}
+
+.alinear-derecha {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20rem;
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    width: 90%;
+    background-color: var(--gris-claro);
+}
+
+/* Footer */
+footer {
+    text-align: center;
 }
